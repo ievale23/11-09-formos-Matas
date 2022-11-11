@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- kad būtų vienoj linijoj name ir laukelis, galima su lentele daryt arba su stilium ir inline-block -->
+
+    <form method="POST" class="border" action="https://formspree.io/f/xlevaaln">
+      <h1>Payment form</h1>
+      <p>Required fields are followed by '*'.</p>
+      <h2>Contact information</h2>
+      <fieldset>
+        <legend>Title</legend>
+        <input type="radio" id="kpenguin" name="title" value="onepenguin" />
+        <label for="penguin">King Penguin</label>
+
+        <br />
+        <input
+          type="radio"
+          id="chpenguin"
+          name="title"
+          value="anotherpenguin"
+        />
+        <label for="penguin">Chinstrap Penguin</label>
+      </fieldset>
+      <br /><br /><br />
+      <legend>Name*</legend>
+      <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        required
+      /><br /><br /><br />
+      <legend>Email*</legend>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+      /><br /><br /><br />
+      <legend>Password*</legend>
+      <input type="password" placeholder="Password" required /><br /><br />
+      <h2>Payment information</h2>
+      <label for="card">Card type:</label>
+      <select name="card" id="card">
+        <option value="visa">VISA</option>
+        <option value="mastercard">MasterCard</option>
+        <option value="maestro">Maestro</option></select
+      ><br /><br /><br />
+      <legend>Card number*</legend>
+      <input
+        type="text"
+        maxlength="16"
+        required
+        name="cardnumber"
+      /><br /><br /><br />
+      <legend>Expiration date*</legend>
+      <i>formatted as mm/yy</i>
+      <input
+        type="date"
+        placeholder="Date"
+        required
+        name="expdate"
+      /><br /><br /><br />
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
